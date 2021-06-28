@@ -1,0 +1,99 @@
+@mixin flexstyle($ai, $jc) {
+  display: flex;
+  align-items: $ai;
+  justify-content: $jc;
+}
+@mixin btn {
+  padding: 10px 20px;
+  background-color: $Gold;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+@mixin inputstyle {
+  padding: 10px 20px;
+  color:black;
+  border: 0.5px solid #afb3b2;
+  border-radius: 3px;
+  outline: none;
+}
+@mixin textstyle {
+  color: #1a0a03;
+  opacity: 0.7;
+}
+@mixin heorbg {
+  background: linear-gradient(
+    90deg,
+    #ee5514 1.14%,
+    rgba(238, 85, 20, 0) 133.88%
+  );
+  opacity: 0.1;
+}
+@mixin herogoldtext {
+  color: $Gold; 
+  text-transform: uppercase;
+  font-family: Source Serif Pro;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 150%;
+}
+
+@mixin cardimagebg ($bg){
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: $bg;
+    opacity: 0.1;
+}
+@mixin respond($size) {
+  @if $size == mobile-S {
+    @media screen and (min-width: 320px) {
+      @content;
+    }
+  }
+
+  @if $size == mobile-M {
+    @media screen and (min-width: 375px) {
+      @content;
+    }
+  }
+
+  @if $size == mobile-L {
+    @media screen and (min-width: 425px) {
+      @content;
+    }
+  }
+
+  @if $size == tab-land {
+    @media screen and (min-width: 576px) {
+      @content;
+    }
+  }
+  @if $size == tab-first {
+    @media screen and (min-width: 650px) {
+      @content;
+    }
+  }
+
+  @if $size == tab-por {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $size == lg {
+    @media screen and (min-width: 992px) {
+      @content;
+    }
+  }
+
+  @if $size == laptop {
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+   

@@ -1,0 +1,46 @@
+.container-fluid {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 13px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.col {
+  width: 100%;
+}
+
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 991px,
+  xl: 1200px,
+  xxl: 1440px,
+);
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: 100% / 12 * $i;
+    
+  }
+}
+
+@each $mq in (sm, md, lg, xl, xxl) {
+  @media screen and (min-width: map-get($breakpoints , $mq )) {
+    @for $i from 1 through 12 {
+      .col-#{$mq}-#{$i} {
+        width: 100% / 12 * $i;
+        
+      }
+    }
+  }
+}

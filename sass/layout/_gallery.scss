@@ -1,0 +1,58 @@
+#gallery{
+    margin-bottom: 70px;
+    .container{
+      .row{
+          margin-bottom: 15px;
+        @include flexstyle (center,flex-start);
+        .text_gallery{
+            text-align: center;
+            @include respond (tab-por){
+                text-align: start;
+            }
+            h1{
+                font-size: 35px;
+            }
+        }
+        .col{
+             ul{
+                 @include flexstyle (flex-start,center);
+                 @include respond (tab-por){
+                    @include flexstyle (flex-start,flex-start);
+                 }
+                 list-style: none;
+                li{
+                    padding-left: 12px;
+                    .active{
+                        color: $Gold;
+                        border-bottom: 1px solid $Gold;
+                    }
+                    a{
+                        text-decoration: none;
+                        color: rgba($color: #000000, $alpha: 0.9);
+                         &:hover{
+                             color: $Gold;
+                             border-bottom: 1px solid $Gold;
+                         }
+                    }
+                }
+             }
+        }
+        .col-md-3{
+            .card{            
+             @include flexstyle (center,center);
+             flex-direction: column;
+              line-height: 31px;
+              margin-left: 20px;
+              padding:0px;      
+              img{
+                  width: 100%;
+                  text-align: start;
+              }
+              .card_footer{
+                  margin-top: 20px;
+              }
+            }
+        }
+      }
+    }
+}

@@ -1,0 +1,25 @@
+@for $i from 1 through 5 {
+    .m-#{$i}{
+        margin: $i * 5px;
+    }
+}
+@for $i from 1 through 5 {
+    .ms-#{$i}{
+        margin-left: $i * 5px;
+    }
+}
+@for $i from 1 through 5 {
+    .me-#{$i}{
+        margin-right: $i * 5px;
+    }
+}
+@for $i from 1 through 5 {
+    .mt-#{$i}{
+        margin-top: $i * 5px;
+    }
+}
+@for $i from 1 through 5 {
+    .mb-#{$i}{
+        margin-bottom: $i * 5px;
+    }
+}

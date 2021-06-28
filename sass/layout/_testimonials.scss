@@ -1,0 +1,59 @@
+#testimonials{
+    margin-bottom: 70px;
+    min-height: 100vh;
+    .container{
+        margin-bottom: 50px;
+        .row{
+            @include flexstyle (center,center);
+            @include respond (tab-por){
+                @include flexstyle (center,flex-start);
+            }
+            .col{
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .col-md-6{
+               .testi_image{
+                   width: 100%;
+               }
+            }
+            .coltesti_text{
+                padding-left: 40px;
+                 img{
+                     width:auto;
+                 }
+                 .testi_textone{
+                     margin-top: 30px;
+                 }
+            }
+          h2{
+             margin-bottom: 22px; 
+          }
+        }
+    }
+}
+.h3{
+    margin-top: 20px;
+    margin-bottom: 18px;
+  }
+  .col_input{
+    .text_little{
+        margin-bottom: 22px;
+    }
+    .form{
+        margin-top:20px;
+        margin-bottom: 20px;
+        display: flex;
+        padding: 0;
+        input{
+            @include inputstyle;
+        }
+    }
+}
+.testi_row{
+    background-color:rgba($color:#81A8DA, $alpha: 0.1);
+}
+.testi_text_little{
+    color: #1a0a03;
+    opacity: 0.7;
+}
